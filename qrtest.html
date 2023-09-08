@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+  </head>
+  <body>
+    <input id="img" type="file" />
+    <script>
+      document.getElementById("img").addEventListener("change", (e) => {
+        // const imageData = e.target
+        console.log(e);
+      });
+      const code = jsQR(imageData, width, height);
+      if (code) {
+        console.log("Found QR code", code);
+      }
+    </script>
+  </body>
+</html>
